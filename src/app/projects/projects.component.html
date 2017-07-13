@@ -1,0 +1,7 @@
+<div class="jumbotron">
+  <h1>{{ this.projectTypeHeader }}</h1>
+</div>
+
+<div class="list-group">
+  <a *ngFor="let project of projects" href="#" class="list-group-item" [routerLink]="['/projects', projectType, project.id]" >{{ project.title }}</a>
+</div>
