@@ -14,7 +14,8 @@
 	<p>{{ selectedProject.description }}</p>
 	<a href="www.github.com">Project Source Codes</a>
 </div>
-
-<app-test></app-test>
+<div *ngIf="isTest">
+	<app-test></app-test>
+</div>
 
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../projects.service';
 import { Project } from '../project';
 import { ActivatedRoute } from '@angular/router';
-import { TestComponent } from '../test/test.component';
+import { TestComponent } from '../projectsHtml/test/test.component';
 
 @Component({
   selector: 'app-project-details',
@@ -13,7 +13,8 @@ import { TestComponent } from '../test/test.component';
 export class ProjectDetailsComponent implements OnInit {
   selectedProject: Project;
   projectId: number;
-  directive: string;
+  isTest: boolean;
+  isNotTest: boolean;
 
   constructor(private projectService: ProjectsService, private route: ActivatedRoute) { }
   ngOnInit() {
@@ -23,7 +24,8 @@ export class ProjectDetailsComponent implements OnInit {
   	this.selectedProject = this.projectService.get(this.projectId);
   	console.log(this.selectedProject);
 
-    this.directive = "app-test";
+    this.isTest = true;
+    this.isNotTest = false;
   }
 
 }
