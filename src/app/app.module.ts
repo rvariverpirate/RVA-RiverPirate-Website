@@ -20,6 +20,14 @@ import 'prismjs/components/prism-c';
  
 import { PrismComponent } from 'angular-prism';
 import { TestComponent } from './projectsHtml/test/test.component';
+import { BbcRssFeedComponent } from './bbc-rss-feed/bbc-rss-feed.component';
+import { BrewBuddyComponent } from './brew-buddy/brew-buddy.component';
+import { TmExperimentsComponent } from './tm-experiments/tm-experiments.component';
+import { OledExperimentsComponent } from './oled-experiments/oled-experiments.component';
+import { BoxingBluetoothComponent } from './boxing-bluetooth/boxing-bluetooth.component';
+import { ActivityComponent } from './activity/activity.component';
+import { BrewTrackerComponent } from './brew-tracker/brew-tracker.component';
+import { ActivityTrackerComponent } from './activity-tracker/activity-tracker.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,15 @@ import { TestComponent } from './projectsHtml/test/test.component';
     MainPageComponent,
     ProjectDetailsComponent,
     PrismComponent,
-    TestComponent
+    TestComponent,
+    BbcRssFeedComponent,
+    BrewBuddyComponent,
+    TmExperimentsComponent,
+    OledExperimentsComponent,
+    BoxingBluetoothComponent,
+    ActivityComponent,
+    BrewTrackerComponent,
+    ActivityTrackerComponent
   ],
   imports: [
     BrowserModule,
