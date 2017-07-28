@@ -20,14 +20,13 @@ import 'prismjs/components/prism-c';
  
 import { PrismComponent } from 'angular-prism';
 import { TestComponent } from './projectsHtml/test/test.component';
-import { BbcRssFeedComponent } from './bbc-rss-feed/bbc-rss-feed.component';
-import { BrewBuddyComponent } from './brew-buddy/brew-buddy.component';
-import { TmExperimentsComponent } from './tm-experiments/tm-experiments.component';
-import { OledExperimentsComponent } from './oled-experiments/oled-experiments.component';
-import { BoxingBluetoothComponent } from './boxing-bluetooth/boxing-bluetooth.component';
-import { ActivityComponent } from './activity/activity.component';
-import { BrewTrackerComponent } from './brew-tracker/brew-tracker.component';
-import { ActivityTrackerComponent } from './activity-tracker/activity-tracker.component';
+import { BbcRssFeedComponent } from './projectsHtml/bbc-rss-feed/bbc-rss-feed.component';
+import { BrewBuddyComponent } from './projectsHtml/brew-buddy/brew-buddy.component';
+import { TmExperimentsComponent } from './projectsHtml/tm-experiments/tm-experiments.component';
+import { OledExperimentsComponent } from './projectsHtml/oled-experiments/oled-experiments.component';
+import { BoxingBluetoothComponent } from './projectsHtml/boxing-bluetooth/boxing-bluetooth.component';
+import { BrewTrackerComponent } from './projectsHtml/brew-tracker/brew-tracker.component';
+import { ActivityTrackerComponent } from './projectsHtml/activity-tracker/activity-tracker.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,6 @@ import { ActivityTrackerComponent } from './activity-tracker/activity-tracker.co
     TmExperimentsComponent,
     OledExperimentsComponent,
     BoxingBluetoothComponent,
-    ActivityComponent,
     BrewTrackerComponent,
     ActivityTrackerComponent
   ],

@@ -12,10 +12,30 @@
 </div>
 <div class="jumbotron">
 	<p>{{ selectedProject.description }}</p>
-	<a href="www.github.com">Project Source Codes</a>
+	<a target="_blank" [href]="'' + selectedProject.gitHub + ''">Project Source Codes</a>
+<!--ng-container *ngComponentOutlet="page"></ng-container-->
 </div>
 <div *ngIf="isTest">
 	<app-test></app-test>
 </div>
-
-
+<div *ngIf="isBbcRssFeed">
+	<app-bbc-rss-feed></app-bbc-rss-feed>
+</div>
+<div *ngIf="isBrewBuddy">
+	<app-brew-buddy></app-brew-buddy>
+</div>
+<div *ngIf="isTmExperiments">
+	<app-tm-experiments></app-tm-experiments>
+</div>
+<div *ngIf="isOledExperiments">
+	<app-oled-experiments></app-oled-experiments>
+</div>
+<div *ngIf="isBoxingBluetooth">
+	<app-boxing-bluetooth></app-boxing-bluetooth>
+</div>
+<div *ngIf="isActivityTracker">
+	<app-activity-tracker></app-activity-tracker>
+</div>
+<div *ngIf="isBrewTracker">
+	<app-brew-tracker></app-brew-tracker>
+</div>

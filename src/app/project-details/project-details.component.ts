@@ -10,7 +10,10 @@ import { OledExperimentsComponent } from '../projectsHtml/oled-experiments/oled-
 import { BoxingBluetoothComponent } from '../projectsHtml/boxing-bluetooth/boxing-bluetooth.component';
 import { ActivityTrackerComponent } from '../projectsHtml/activity-tracker/activity-tracker.component';
 import { BrewTrackerComponent } from '../projectsHtml/brew-tracker/brew-tracker.component';
-
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgComponentOutlet } from '@angular/common';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-project-details',
@@ -18,8 +21,18 @@ import { BrewTrackerComponent } from '../projectsHtml/brew-tracker/brew-tracker.
   styleUrls: ['./project-details.component.css']
 })
 
+@NgModule({
+  imports: [BrowserModule],
+  declarations: [AppComponent, TestComponent],
+  entryComponents: [TestComponent],
+  bootstrap: [ AppComponent ]
+})
+
 export class ProjectDetailsComponent implements OnInit {
   selectedProject: Project;
+    
+  page = TestComponent;
+
   projectId: number;
   isTest: boolean;
   isBbcRssFeed: boolean;
@@ -38,15 +51,35 @@ export class ProjectDetailsComponent implements OnInit {
   	});
   	this.selectedProject = this.projectService.get(this.projectId);
   	console.log(this.selectedProject);
+    this.page = TestComponent;
 
-    this.isTest = true;
-    this.isBbcRssFeed = true;
-    this.isBrewBuddy = true;
-    this.isTmExperiments = true;
-    this.isOledExperiments = true;
-    this.isBoxingBluetooth = true;
-    this.isActivityTracker = true;
-    this.isBrewTracker = true;
+    this.isTest = false;
+
+    if(this.projectId == 1){
+      this.isBbcRssFeed = true;
+    }
+    else if(this.projectId == 2){
+      this.isBrewBuddy = true;
+    }
+    else if(this.projectId == 3){
+      this.isTmExperiments = true;
+    }
+    else if(this.projectId == 4){
+      this.isOledExperiments = true;
+    }
+    else if(this.projectId == 5){
+      this.isBoxingBluetooth = true;
+    }
+    else if(this.projectId == 6){
+      this.isActivityTracker = true;
+    }
+    else if(this.projectId == 7){
+      this.isBrewTracker = true;
+    }
+    else{
+      this.isTest = true;
+    }
+
   }
 
 }
