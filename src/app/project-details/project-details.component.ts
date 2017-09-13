@@ -42,6 +42,7 @@ export class ProjectDetailsComponent implements OnInit {
   isBoxingBluetooth: boolean;
   isActivityTracker: boolean;
   isBrewTracker: boolean;
+  isGuitarTuner: boolean;
 
 
   constructor(private projectService: ProjectsService, private route: ActivatedRoute) { }
@@ -75,6 +76,9 @@ export class ProjectDetailsComponent implements OnInit {
     }
     else if(this.projectId == 7){
       this.isBrewTracker = true;
+    }
+    else if(this.projectId == 8){
+      this.isGuitarTuner = true;
     }
     else{
       this.isTest = true;

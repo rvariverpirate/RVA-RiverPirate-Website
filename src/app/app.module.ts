@@ -27,6 +27,7 @@ import { OledExperimentsComponent } from './projectsHtml/oled-experiments/oled-e
 import { BoxingBluetoothComponent } from './projectsHtml/boxing-bluetooth/boxing-bluetooth.component';
 import { BrewTrackerComponent } from './projectsHtml/brew-tracker/brew-tracker.component';
 import { ActivityTrackerComponent } from './projectsHtml/activity-tracker/activity-tracker.component';
+import { GuitarTunerComponent } from './guitar-tuner/guitar-tuner.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ActivityTrackerComponent } from './projectsHtml/activity-tracker/activi
     OledExperimentsComponent,
     BoxingBluetoothComponent,
     BrewTrackerComponent,
-    ActivityTrackerComponent
+    ActivityTrackerComponent,
+    GuitarTunerComponent
   ],
   imports: [
     BrowserModule,
